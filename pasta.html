@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zeyada&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div id="preloader"></div>
+    <nav>
+       <ul class="sidebar">
+        <img onclick="hideSidebar()" src="close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pasta.html">Pasta</a></li>
+        <li><a href="pizza.html">Pizza</a></li>
+        <li><a href="">Register</a></li>
+        <li id="receipt" onclick="displayTotal()"><a href=""><img class="navimg" src="total.png" alt=""></a></li>   
+    </ul>
+    <ul>
+        <li id="logo"><a href=""><img class="navimg" src="logo.png" alt=""></a></li>
+        <li class="navelts"><a href="index.html">Home</a></li>
+        <li class="navelts"><a href="pasta.html">Pasta</a></li>
+        <li class="navelts"><a href="pizza.html">Pizza</a></li>
+        <li class="navelts"><a href="">Register</a></li>
+        <li id="receipt" class="navelts" onclick="displayTotal()"><a href=""><img class="navimg" src="total.png" alt=""></a></li>
+        <li onclick="showSidebar()" id="burger"><img src="menu_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt=""></li>
+    </ul>
+    </nav>
+    <button id="clearTotal" style="border-radius: 50%;
+width:50px;
+height:50px;
+display: flex;
+align-items: center;
+justify-content: center;
+position:fixed;bottom:0;
+left:0;
+background-color: red;"> Clear Total</button>
+<img style="width:100vw;
+height:100vh" src="pastahero.png" alt="">
+<h2 style="position:absolute;
+z-index:3;
+text-align:center;
+width:100%;
+top:400px;
+font-size: 80px;
+text-shadow: 1px 4px yellow;
+color:white">Pasta Menu</h2>
+<section id="menu">
+        <div class="container">
+      <div class="cell">
+  <img class="images" src="carbonara.png" alt="Spaghetti alla Carbonara">
+  <h1>Carbonara</h1>
+  <p class="menup">Classic Roman pasta tossed with crispy guanciale, egg yolks, pecorino romano, and freshly cracked black pepper.</p>
+  <h1>$<span class="price">16.50</span></h1>
+  <button class="buy-btn">Buy</button>
+</div>
+
+<div class="cell">
+  <img class="images" src="casio-e-pepe.png" alt="Cacio e Pepe">
+  <h1>Cacio e Pepe</h1>
+  <p class="menup">A minimalist Roman masterpiece featuring sharp pecorino romano cheese and toasted black pepper creating a creamy sauce.</p>
+  <h1>$<span class="price">14.00</span></h1>
+  <button class="buy-btn">Buy</button>
+</div>
+
+<div class="cell">
+  <img class="images" src="lasagna.png" alt="Lasagna alla Bolognese">
+  <h1>Lasagna Bolognese</h1>
+  <p class="menup">Layers of rich slow-cooked beef ragù, creamy béchamel sauce, delicate pasta sheets, and melted parmigiano-reggiano.</p>
+  <h1>$<span class="price">18.00</span></h1>
+  <button class="buy-btn">Buy</button>
+</div>
+
+<div class="cell">
+  <img class="images" src="Pasta-alla-Norma.png" alt="Pasta alla Norma">
+  <h1>Pasta alla Norma</h1>
+  <p class="menup">A Sicilian favorite combines tender sautéed eggplant, sweet tomato sauce, basil, and a generous grating of salted ricotta cheese.</p>
+  <h1>$<span class="price">15.50</span></h1>
+  <button class="buy-btn">Buy</button>
+</div>
+
+<div class="cell">
+  <img class="images" src="penne-arrabiatta.png" alt="Penne all'Arrabbiata">
+  <h1>Penne all'Arrabbiata</h1>
+  <p class="menup">Tube-shaped penne pasta tossed in a fiery, spicy tomato sauce infused with garlic, red chili flakes, and extra virgin olive oil.</p>
+  <h1>$<span class="price">13.50</span></h1>
+  <button class="buy-btn">Buy</button>
+</div>
+
+<div class="cell">
+  <img class="images" src="Spaghetti-Aglio-e-Olio.png" alt="Spaghetti Aglio e Olio">
+  <h1>Spaghetti Aglio e Olio</h1>
+  <p class="menup">Simple and elegant pasta tossed in gently warmed extra virgin olive oil, sliced garlic cloves, and a pinch of crushed chili pepper.</p>
+  <h1>$<span class="price">12.00</span></h1>
+  <button class="buy-btn">Buy</button>
+</div>
+
+<div class="cell">
+  <img class="images" src="tagliatelle.png" alt="Tagliatelle al Ragù">
+  <h1>Tagliatelle al Ragù</h1>
+  <p class="menup">Ribbons of fresh, golden egg pasta generously coated in a traditional, deeply savory slow-simmered meat sauce.</p>
+  <h1>$<span class="price">17.00</span></h1>
+  <button class="buy-btn">Buy</button>
+</div>
+
+<div class="cell">
+  <img class="images" src="trofie.png" alt="Trofie al Pesto">
+  <h1>Trofie al Pesto</h1>
+  <p class="menup">Twisted Ligurian trofie pasta perfectly coated in a vibrant fresh basil pesto, pine nuts, garlic, and parmigiano cheese.</p>
+  <h1>$<span class="price">15.00</span></h1>
+  <button class="buy-btn">Buy</button>
+</div>
+
+    </div>
+</section>
+     <footer>
+    <div class="footerelements">
+        <img class="footerimgs"  src="open.svg" alt="">
+        <p class="fp">From Monday to Friday</p>
+        <img  class="footerimgs" src="location.svg" alt="">
+        <p class="fp">Tajo, Hamikh</p>
+        <img  class="footerimgs" src="delivery.svg" alt="">
+        <p class="fp">delivery</p>
+        <img class="footerimgs"  src="instagram.svg" alt="">
+        <p class="fp">VirostoRestaurant</p>
+    </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d510035.06287708494!2d108.13120774538575!3d-2.916941298619328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e10d6e680ba7e21%3A0x4039d80b2210010!2sManggar%2C%20East%20Belitung%20Regency%2C%20Bangka%20Belitung%20Islands%2C%20Indonesia!5e0!3m2!1sen!2slb!4v1793455128519!5m2!1sen!2slb" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>

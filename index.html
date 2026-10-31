@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zeyada&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+   <div id="preloader"></div>
+<nav>
+       <ul class="sidebar">
+        <img onclick="hideSidebar()" src="close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pasta.html">Pasta</a></li>
+        <li><a href="pizza.html">Pizza</a></li>
+        <li><a href="">Register</a></li>
+        <li id="receipt" onclick="displayTotal()"><a href=""><img  class="navimg" src="total.png" alt=""></a></li>   
+    </ul>
+    <ul>
+        <li id="logo"><a href=""><img class="navimg" src="logo.png" alt=""></a></li>
+        <li class="navelts"><a href="index.html">Home</a></li>
+        <li class="navelts"><a href="pasta.html">Pasta</a></li>
+        <li class="navelts"><a href="pizza.html">Pizza</a></li>
+        <li class="navelts"><a href="">Register</a></li>
+        <li id="receipt" class="navelts" onclick="displayTotal()"><a href=""><img  class="navimg" src="total.png" alt=""></a></li>
+        <li onclick="showSidebar()" id="burger"><img src="menu_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt=""></li>
+    </ul>
+</nav>
+<button id="clearTotal" style="border-radius: 50%;
+width:50px;
+height:50px;
+display: flex;
+align-items: center;
+justify-content: center;
+position:fixed;bottom:0;
+left:0;
+background-color: red;"> Clear Total</button>
+   
+
+   <div id="maindiv">
+    <div id="sousmaindiv">
+       <h1>Made with love, served with pride.</h1> 
+       <p>From our kitchen to yout table, every ingredient carries a story, every step approaches hope...</p>
+       <button id="herobutton">Shop Now!</button>
+       <button id="history">Learn Our Story!</button>
+    </div>
+     <img id="heroimage" src="heroimage.png" alt="">
+   </div>
+   <img id="pasta" src="pasta.png" alt="pasta">
+    <p>Explore the taste of the <span>Italian Food</span>. At Virosto, the taste is unforgettable...  </p>
+    <footer>
+    <div class="footerelements">
+        <img class="footerimgs"  src="open.svg" alt="">
+        <p class="fp">From Monday to Friday</p>
+        <img  class="footerimgs" src="location.svg" alt="">
+        <p class="fp">Tajo, Hamikh</p>
+        <img  class="footerimgs" src="delivery.svg" alt="">
+        <p class="fp">delivery</p>
+        <img class="footerimgs"  src="instagram.svg" alt="">
+        <p class="fp">VirostoRestaurant</p>
+    </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d510035.06287708494!2d108.13120774538575!3d-2.916941298619328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e10d6e680ba7e21%3A0x4039d80b2210010!2sManggar%2C%20East%20Belitung%20Regency%2C%20Bangka%20Belitung%20Islands%2C%20Indonesia!5e0!3m2!1sen!2slb!4v1793455128519!5m2!1sen!2slb" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
